@@ -21,13 +21,13 @@ greet("Bebe");
  * isOdd(10) -> false
  */
 function isOdd(n) {
-  if (n % 2 == 0) {
-    return false;
-  } else {
-    return true;
-  }
+  // if (n % 2 == 0) {
+  //   return false;
+  // } else {
+  //   return true;
+  // }
 
-  // Your code here
+  return n % 2;
 }
 console.log(isOdd(7));
 /**
@@ -41,14 +41,18 @@ console.log(isOdd(7));
  */
 function oddsSmallerThan(n) {
   // Your code here
-  let count = 0;
-  for (let i = 1; i < n; i += 2) {
-    count++;
-  }
-  return count;
+  // let count = 0;
+  // for (let i = 1; i < n; i += 2) {
+  //   count++;
+  // }
+  // return count;
+
+  //7/2 = 3.5 and then turn it to int
+
+  return parseInt(n / 2);
 }
 
-console.log(oddsSmallerThan(7));
+console.log(oddsSmallerThan(15));
 
 /**
  * squareOrDouble(n):
@@ -62,9 +66,10 @@ console.log(oddsSmallerThan(7));
  */
 function squareOrDouble(n) {
   if (isOdd(n)) {
-    return "its square";
-  } else {
-    return "its double";
+    return n * n;
   }
+
+  return n * 2;
+
   // Your code here
 }
